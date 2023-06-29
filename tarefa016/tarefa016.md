@@ -4,49 +4,31 @@
 
 |objeto|formato|Observação|
 |--|--|--|
-|Data|dd/mm/aa|as "//" (barras) devem fazer parte da regex|
-\b(?:0[1-9]|[12][0-9]|3[01])\/(?:0[1-9]|1[0-2])\/[0-9]{2}\b
+|Data|dd/mm/aa|as "//" (barras) devem fazer parte da regex| \b(?:0[1-9]|[12][0-9]|3[01])\/(?:0[1-9]|1[0-2])\/[0-9]{2}\b
 
-|Data|dd/mm/aaa|as "//" (barras) devem fazer parte da regex|
-\b(?:0[1-9]|[12][0-9]|3[01])\/(?:0[1-9]|1[0-2])\/[0-9]{3}\b
+|Data|dd/mm/aaa|as "//" (barras) devem fazer parte da regex| \b(?:0[1-9]|[12][0-9]|3[01])\/(?:0[1-9]|1[0-2])\/[0-9]{3}\b
 
-Data|dd/mm/aaa hh:mm:ss|as "//" (barras), os ":" dois pontos e o espaço devem fazer parte da regex|
-\b(?:0[1-9]|[1-2][0-9]|3[0-1])\/(?:0[1-9]|1[0-2])\/[0-9]{4} (?:[01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]\b
+Data|dd/mm/aaa hh:mm:ss|as "//" (barras), os ":" dois pontos e o espaço devem fazer parte da regex| \b(?:0[1-9]|[1-2][0-9]|3[0-1])\/(?:0[1-9]|1[0-2])\/[0-9]{4} (?:[01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]\b
 
-|Data|yy/mm/dd|as "//" (barras) devem fazer parte da regex|
-\b(?:[2-9]\d|[0-1]\d)\/(?:0[1-9]|1[0-2])\/(?:0[1-9]|[1-2]\d|3[0-1])\b
+|Data|yy/mm/dd|as "//" (barras) devem fazer parte da regex| \b(?:[2-9]\d|[0-1]\d)\/(?:0[1-9]|1[0-2])\/(?:0[1-9]|[1-2]\d|3[0-1])\b
 
-|Data|yyyy/mm/dd|as "//" (barras) devem fazer parte da regex|
-\b(?:[2-9]\d{3}|1\d{3}|200[0-9]|201[0-9]|202[0-2])\/(?:0[1-9]|1[0-2])\/(?:0[1-9]|[1-2]\d|3[0-1])\b
+|Data|yyyy/mm/dd|as "//" (barras) devem fazer parte da regex| \b(?:[2-9]\d{3}|1\d{3}|200[0-9]|201[0-9]|202[0-2])\/(?:0[1-9]|1[0-2])\/(?:0[1-9]|[1-2]\d|3[0-1])\b
 
 |Número decimal|dd.ddd.ddd|Os "." (pontos ) devem fazer parte da regex. Tanto a parte inteira, como a fracionária podem conter de 1 a 5 casas|
-
-|Nomes de Arquivos / documentos|nome.(doc,docx,xls,xlsx,pdf,csv,txt)|pode utilizar outras extensões para teste.|
-\.(doc|docx|xls|xlsx|pdf|csv|txt)$
+|Nomes de Arquivos / documentos|nome.(doc,docx,xls,xlsx,pdf,csv,txt)|pode utilizar outras extensões para teste.| \.(doc|docx|xls|xlsx|pdf|csv|txt)$
 |E-mail|nome@dominio|dominio pode ser ".com", ".com.br", ".goias.gov.br", "(.mil, .gov, .esp, .edu).(br,ar,uk,fr,ru,es,it)"|
-
 |Codigo Cor HTML ||#00ccff|
-|Arquivo de Imagem||*.(jpg,gif,png), etc.|
-\.(png|jpg|gif|jpeg)$
-|Endereco IP ||192.168.1.1|
-^(\d{1,3}\.){3}\d{1,3}$
-|Arquivos Multimedia ||*.(swf,mov,wma,mpg,mp3,wav)|
-\.(swf|mov|wma|mpg|mp3|wav)$
-|Telefone (BR) ||(11) 5555-1977 |
-^\(\d{2}\)\s\d{4}-\d{4}$
-|Celular (BR)|(55) (62) 9834.1243|os parênteses e pontos fazem parte da regex.|
-^\(\d{2}\) \(\d{2}\) \d{4}\.\d{4}$
+|Arquivo de Imagem||*.(jpg,gif,png), etc.| \.(png|jpg|gif|jpeg)$
+|Endereco IP ||192.168.1.1| ^(\d{1,3}\.){3}\d{1,3}$
+|Arquivos Multimedia ||*.(swf,mov,wma,mpg,mp3,wav)| \.(swf|mov|wma|mpg|mp3|wav)$
+|Telefone (BR) ||(11) 5555-1977 | ^\(\d{2}\)\s\d{4}-\d{4}$
+|Celular (BR)|(55) (62) 9834.1243|os parênteses e pontos fazem parte da regex.| ^\(\d{2}\) \(\d{2}\) \d{4}\.\d{4}$
 
-|Hora|(HH:MM)|Os ":" dois pontos, fazem parte da regex.|
-^([01]\d|2[0-3]):[0-5]\d$
-|Hora|(HH:MM:SS)|Os ":" dois pontos, fazem parte da regex.|
-^([01]\d|2[0-3]):([0-5]\d):([0-5]\d)$
-|URL||http://www.google.com, https://www.google.com.br |
-^(http|https):\/\/[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*\.[a-zA-Z]{2,}$
-|Domínio||www.yahoo.com, www.yahoo.com.br|
-^www\.[a-zA-Z]+\.[a-zA-Z]+(\.[a-zA-Z]+)?$
-|Telefone Internacional |1.245.532.3422|os "." pontos fazem parte da regex.| 
-^1\.\d{1,3}\.\d{1,3}\.\d{1,4}$
+|Hora|(HH:MM)|Os ":" dois pontos, fazem parte da regex.| ^([01]\d|2[0-3]):[0-5]\d$
+|Hora|(HH:MM:SS)|Os ":" dois pontos, fazem parte da regex.| ^([01]\d|2[0-3]):([0-5]\d):([0-5]\d)$
+|URL||http://www.google.com, https://www.google.com.br | ^(http|https):\/\/[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*\.[a-zA-Z]{2,}$
+|Domínio||www.yahoo.com, www.yahoo.com.br| ^www\.[a-zA-Z]+\.[a-zA-Z]+(\.[a-zA-Z]+)?$
+|Telefone Internacional |1.245.532.3422|os "." pontos fazem parte da regex.| ^1\.\d{1,3}\.\d{1,3}\.\d{1,4}$
 
 
 
